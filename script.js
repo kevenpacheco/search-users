@@ -6,6 +6,7 @@ let data;
 window.addEventListener('load', () => {
     usersList = document.querySelector('.users');
     data = document.querySelector('.data');
+    document.querySelector('input').focus();
     
     fetchUsers()
 })
@@ -67,8 +68,8 @@ function renderPeopleList() {
         let userHTML = `
         <div class="user">
             <img src='${picture}'>
-            <p>${name}</p>
-            <p>${age} anos</p>
+            <p class="name">${name}</p>
+            <p>${age} ages</p>
         </div>
         `;
 
@@ -85,10 +86,10 @@ function renderStatistics() {
     let averangeAges = media()
     
     let statistic = `
-    <p>Male: ${numberOfMen}</p>
-    <p>Female: ${numberOfWoman}</p>
-    <p>Sum of ages: ${sumOfAges}</p>
-    <p>Average ages: ${averangeAges.toFixed(2)}</p>
+    <p><span>Male:</span> ${numberOfMen}</p>
+    <p><span>Female:</span> ${numberOfWoman}</p>
+    <p><span>Sum of ages:</span> ${sumOfAges}</p>
+    <p><span>Average ages:</span> ${averangeAges.toFixed(2)}</p>
     `;
     
     data.innerHTML += statistic;

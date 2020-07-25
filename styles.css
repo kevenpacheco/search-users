@@ -1,5 +1,11 @@
+h2 {
+    font-size: 2rem;
+
+    margin: 20px 0;
+}
+
 body {
-    background-color: whitesmoke;
+    background-color: rgb(166, 227, 255);
 
 }
 
@@ -8,7 +14,14 @@ header h1 {
 
     color: black;
 
-    font-size: 2rem;
+    font-size: 3.5rem;
+}
+
+header h1 img {
+    width: 45px;
+    height: 45px;
+
+    margin-left: 5px;
 }
 
 .search-container {
@@ -17,28 +30,51 @@ header h1 {
     justify-content: space-between;
 
     width: auto;
-    max-width: 500px;
+    max-width: 505px;
     margin: auto;
-
+    margin-bottom: 20px;
 }
 
 .search-container input {
     width: 410px;
+    height: 30px;
 
-    border: 3px solid;
+    text-align: center;
+
+    border: 2px solid black;
     border-radius: 8px;
-    border-color: black;
 
-    background-color: rgb(202, 202, 202);
     color: black;
+    background-color: whitesmoke;
+
+    box-shadow: -10px 11px 5px darkslategrey;
+}
+
+.search-container input, button:focus {
+    outline: none;
 }
 
 .search-container button {
+    height: 35px;
+
     border-radius: 8px;
     border-color: black;
 
+    background-color: whitesmoke;
+
+    color: black;
+
+    box-shadow: -10px 11px 5px darkslategrey;
+
+    cursor: pointer;
+
+}
+
+.search-container button:hover {
+    transition: 2s;
     background-color: black;
-    color: white;
+    color: whitesmoke;
+    border: 2px solid whitesmoke;
 }
 
 .data-container {
@@ -48,22 +84,18 @@ header h1 {
     justify-content: center;
 }
 
-/* .data-container .users { */
-    /* width: 100%;
-    max-width: 500px;
-    height: 300px;
-
-    border: 2px solid white;
-} */
-
 .data-container .statistics, .users {
     width: 100%;
     max-width: 500px;
     height: auto;
 
+    margin-bottom: 20px;
+
     border: 2px solid black;
     border-radius: 8px;
-    background-color: rgb(202, 202, 202);
+    background-color: whitesmoke;
+
+    box-shadow: -10px 11px 5px darkslategrey;
 
     text-align: center;
 }
@@ -77,9 +109,24 @@ header h1 {
     
 }
 
-.user {
+.data-container .statistics .data span {
+    font-weight: bold;
+}
+
+.data-container .users .user {
     display: flex;
+    align-items: center;
     justify-content: space-between;
 
     margin: 10px 20px;
+}
+
+.data-container .users .user img {
+    
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.data-container .users .user .name {
+    font-size: 1.3em;
 }
